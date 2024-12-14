@@ -48,7 +48,7 @@ try:
         try:
             file = input("insert file name: ")
             if not file:
-                name = f"files/day{day}_file"
+                file = f"files/day{day}_file"
             start = time()
             solution = f(file)
             end = time()
