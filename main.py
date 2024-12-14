@@ -26,17 +26,17 @@ try:
     mod = importlib.import_module("day" + str(day))
     part = input("select a part:\n[1] part 1\n[2] part 2\n")
     if part.isnumeric():
-        if "." in day:
+        if "." in part:
             print("a day is an int, not a float")
             exit(1)
-        if "j" in day:
+        if "j" in part:
             print("a day is an int, not a complex")
             exit(1)
-        if "-" in day:
+        if "-" in part:
             print(
                 "a negative day? really? I mean I wish we had problems since idk November 1st but that's not the case")
             exit(1)
-        if "+" in day:
+        if "+" in part:
             print("...")
             print("fine, that technically works, but my only question is why you added the + sign")
             exit(1)
