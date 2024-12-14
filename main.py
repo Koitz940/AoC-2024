@@ -47,6 +47,8 @@ try:
         f = getattr(mod, "part" + str(part))
         try:
             file = input("insert file name: ")
+            if not file:
+                name = f"files/day{day}_file"
             start = time()
             solution = f(file)
             end = time()
