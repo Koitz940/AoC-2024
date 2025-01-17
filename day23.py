@@ -21,8 +21,8 @@ def part1(filename):
             for i in range(len(pcs[pc])):
                 for j in range(i+1, len(pcs[pc])):
                     if pcs[pc][i] in pcs[pcs[pc][j]]:
-                        count += 1/(2**sum(1 if f[0] =="t" else 0 for f in (pcs[pc][i], pcs[pc][j])))
-    return int(count)
+                        count += 1/(1+sum(1 if f[0] =="t" else 0 for f in (pcs[pc][i], pcs[pc][j])))
+    return round(count)
 
 def part2(filename):
     pairs = parser(filename)
@@ -56,3 +56,4 @@ def part2(filename):
         return answer
     return answer[:-1]
 
+print(part1("files/day23_file"))
