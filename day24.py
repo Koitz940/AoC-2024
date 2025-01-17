@@ -1,7 +1,7 @@
 from time import time
 #this works by putting start = time() at some moment and then doing print(time() - start) after part you wanted to measure has happened
 #one to calculate whole code is written
-
+#hello
 def parser(filename):
     with open(filename) as f:
         lines = f.read()
